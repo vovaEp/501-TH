@@ -36,12 +36,10 @@ def omega_div(x,y, omega_x, omega_y):
     return x/(x+y)*omega_x + y/(x+y)*omega_y
 print('Відносна похибка X+Y= ',omega_div(x,y, omega_x, omega_y))
 
-
 # Відносна похибка віднімання
 def omega_subtraction(x,y, omega_x, omega_y):
     return x/(x-y)*omega_x - y/(x-y)*omega_y
 print('Відносна похибка X-Y= ',omega_subtraction(x,y, omega_x, omega_y))
-
 
 # Відносна похибка множення
 def omega_multi(omega_x, omega_y):
