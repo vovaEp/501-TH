@@ -4,7 +4,7 @@ import sys
 import scipy
 import matplotlib
 import sklearn
-import mglearn
+#import mglearn
 
 url = 'https://raw.githubusercontent.com/jbrownlee/Datasets/master/banknote_authentication.csv'
 columns = ['variance', 'skewness','curtosis','entropy','class']

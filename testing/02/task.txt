@@ -1,0 +1,15 @@
+http://opencart.qatestlab.net/
+
+тест верстки сайту
+вказати броузер і версію
+Додати summary (одне)
+перевірити пункти що вже є
+5 багів
+WebDev Chrome ext
+
+
+1) ua lang
+2) diff product div hide
+3) currency dropdown
+4)
+5) 
