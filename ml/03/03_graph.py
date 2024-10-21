@@ -1,5 +1,7 @@
+import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
+
 #plt.plot([1, 2, 3, 4])
 #plt.ylabel('some numbers')
 #plt.show()
@@ -20,5 +22,9 @@ ax2.plot(y,x,'g', linewidth=2)
 ax2.set_title('sqrt_parabola')
 ax2.set_xlabel('x')
 ax2.set_ylabel('y')
+
+
+plt.plot([1, 2, 3, 4], [1, 4, 9, 16], 'ro')
+plt.axis([0, 6, 0, 20])
 
 plt.show()
