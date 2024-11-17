@@ -1,0 +1,21 @@
+
+graph TD
+    start[Початок] --> load_libraries[Завантаження бібліотек]
+    load_libraries --> initialize_vars[Ініціалізація змінних та встановлення обмежень]
+    initialize_vars --> read_data[Читання файлу income_data.txt рядок за рядком]
+    read_data --> check_missing{Чи є у рядку пропущені значення?}
+    check_missing -- Так --> skip_row[Пропустити рядок]
+    check_missing -- Ні --> check_class{Мітка класу: менше чи дорівнює 50K або більше 50K?}
+    check_class -- Менше чи дорівнює 50K --> class_less_equal_50K[Додати до класу менше чи дорівнює 50K]
+    check_class -- Більше 50K --> class_greater_50K[Додати до класу більше 50K]
+    class_less_equal_50K --> encode_features[Кодування категоричних та числових ознак]
+    class_greater_50K --> encode_features
+    encode_features --> split_features_labels[Розділення ознак X та міток y]
+    split_features_labels --> train_model[Навчання OneVsOneClassifier на повних даних]
+    train_model --> cross_validation[Розділення на навчальну та тестову вибірки і повторне навчання]
+    cross_validation --> check_input{Чи є вхідні дані числовими або категоричними?}
+    check_input -- Категоричні --> encode_input[Кодування категоричних вхідних даних]
+    check_input -- Числові --> predict_class[Прогнозування класу для вхідних даних]
+    encode_input --> predict_class
+    predict_class --> output_result[Виведення передбаченого класу]
+    output_result --> process_end[Завершення процесу]
